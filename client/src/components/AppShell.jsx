@@ -37,7 +37,7 @@ export default function AppShell() {
     <div className="app-shell">
       <aside className={`sidebar${sidebarOpen ? " open" : ""}`}>
         <div className="sidebar__header">
-          <SynergyMark />
+          <SynergyMark compact />
           <button className="ghost-button mobile-only" type="button" onClick={() => setSidebarOpen(false)}>
             <X size={18} />
           </button>
@@ -93,4 +93,3 @@ export default function AppShell() {
     </div>
   );
 }
-

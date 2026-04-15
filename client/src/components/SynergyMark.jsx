@@ -1,18 +1,13 @@
 export default function SynergyMark({
   compact = false,
   title = "Synergy",
-  subtitle = "Turning waste into value"
+  subtitle = "Waste Paper Initiative"
 }) {
+  const altText = subtitle ? `${title} logo - ${subtitle}` : `${title} logo`;
+
   return (
     <div className={`synergy-mark${compact ? " compact" : ""}`}>
-      <div className="synergy-mark__glyph" aria-hidden="true">
-        <span />
-        <span />
-      </div>
-      <div>
-        <strong>{title}</strong>
-        {!compact ? <span>{subtitle}</span> : null}
-      </div>
+      <img className="synergy-mark__image" src="/synergy-logo.png" alt={altText} />
     </div>
   );
 }

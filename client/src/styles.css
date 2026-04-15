@@ -222,49 +222,19 @@ p {
 .synergy-mark {
   display: inline-flex;
   align-items: center;
-  gap: 0.9rem;
-  color: var(--green-dark);
 }
 
-.synergy-mark strong {
+.synergy-mark__image {
   display: block;
-  font-size: 1.15rem;
+  width: auto;
+  height: 118px;
+  max-width: min(260px, 100%);
+  object-fit: contain;
 }
 
-.synergy-mark span:last-child {
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
-.synergy-mark.compact strong {
-  font-size: 1rem;
-}
-
-.synergy-mark__glyph {
-  width: 48px;
-  height: 48px;
-  border-radius: 18px;
-  display: grid;
-  place-items: center;
-  position: relative;
-  background: linear-gradient(160deg, rgba(33, 97, 70, 0.18), rgba(47, 130, 93, 0.34));
-  border: 1px solid rgba(33, 97, 70, 0.18);
-}
-
-.synergy-mark__glyph span {
-  position: absolute;
-  width: 16px;
-  height: 26px;
-  border-radius: 16px 16px 2px 16px;
-  background: linear-gradient(180deg, var(--green-mid), var(--green-dark));
-}
-
-.synergy-mark__glyph span:first-child {
-  transform: rotate(-12deg) translateX(-6px);
-}
-
-.synergy-mark__glyph span:last-child {
-  transform: rotate(18deg) translateX(8px);
+.synergy-mark.compact .synergy-mark__image {
+  height: 72px;
+  max-width: 180px;
 }
 
 .public-page {
@@ -591,11 +561,12 @@ p {
 }
 
 .sidebar .synergy-mark {
-  color: #fff;
+  width: 100%;
 }
 
-.sidebar .synergy-mark span:last-child {
-  color: rgba(255, 255, 255, 0.7);
+.sidebar .synergy-mark__image {
+  height: 64px;
+  max-width: 160px;
 }
 
 .sidebar__header,
