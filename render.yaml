@@ -5,7 +5,6 @@ services:
     plan: free
     region: singapore
     buildCommand: npm install && npm run build
-    preDeployCommand: npm run bootstrap
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:
