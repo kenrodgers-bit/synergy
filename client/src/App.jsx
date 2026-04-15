@@ -12,6 +12,7 @@ const ClientsPage = lazy(() => import("./pages/ClientsPage"));
 const CollectionsPage = lazy(() => import("./pages/CollectionsPage"));
 const DocumentsPage = lazy(() => import("./pages/DocumentsPage"));
 const ReportsPage = lazy(() => import("./pages/ReportsPage"));
+const SynergyAdminPage = lazy(() => import("./pages/SynergyAdminPage"));
 const TeamPage = lazy(() => import("./pages/TeamPage"));
 
 function ProtectedLayout() {
@@ -45,6 +46,7 @@ export default function App() {
                   <Route element={<Placeholder />}>
                     <Route path="/app/documents" element={<DocumentsPage />} />
                     <Route path="/app/reports" element={<ReportsPage />} />
+                    <Route path="/app/synergy-admin" element={<SynergyAdminPage />} />
                   </Route>
                 </Route>
 

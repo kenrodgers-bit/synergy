@@ -7,6 +7,7 @@ import {
   Home,
   Menu,
   NotebookPen,
+  PanelsTopLeft,
   Users,
   X
 } from "lucide-react";
@@ -22,6 +23,12 @@ const baseNavigation = [
     label: "Collections",
     icon: ClipboardList,
     roles: ["super-admin", "admin", "collection-agent"]
+  },
+  {
+    to: "/app/synergy-admin",
+    label: "Synergy Admin",
+    icon: PanelsTopLeft,
+    roles: ["super-admin", "admin"]
   },
   { to: "/app/documents", label: "Documents", icon: FileText, roles: ["super-admin", "admin"] },
   { to: "/app/reports", label: "Reports", icon: BarChart3, roles: ["super-admin", "admin"] },
