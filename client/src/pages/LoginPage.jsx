@@ -9,8 +9,8 @@ export default function LoginPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const [form, setForm] = useState({
-    email: "superadmin@synergy.co.ke",
-    password: "Synergy123!"
+    email: "",
+    password: ""
   });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -41,7 +41,7 @@ export default function LoginPage() {
         <div>
           <p className="eyebrow">Internal Access</p>
           <h1>Sign in to the Synergy dashboard</h1>
-          <p>Use one of the seeded staff accounts after you run the backend seed command.</p>
+          <p>Enter your authorized staff email and password to continue.</p>
         </div>
 
         <label>
@@ -70,16 +70,7 @@ export default function LoginPage() {
         </button>
 
         {error ? <p className="form-message error">{error}</p> : null}
-
-        <div className="demo-credentials">
-          <strong>Seeded demo logins</strong>
-          <span>superadmin@synergy.co.ke</span>
-          <span>admin@synergy.co.ke</span>
-          <span>agent@synergy.co.ke</span>
-          <span>Password: Synergy123!</span>
-        </div>
       </form>
     </div>
   );
 }
-
