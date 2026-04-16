@@ -35,6 +35,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<PublicHome />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/synergy-admin" element={<SynergyAdminPage />} />
 
             <Route element={<ProtectedRoute />}>
               <Route element={<ProtectedLayout />}>
